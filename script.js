@@ -52,19 +52,5 @@ document.addEventListener('keydown', (e) => {
         nextSlide();
     } else if (e.key === 'ArrowLeft') {
         prevSlide();
-    } else if (e.key === 'f') {
-        toggleFullScreen();
     }
 });
-
-function toggleFullScreen() {
-    if (!document.fullscreenElement) {
-        document.documentElement.requestFullscreen().catch(err => {
-            console.log(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
-        });
-    } else {
-        if (document.exitFullscreen) {
-            document.exitFullscreen();
-        }
-    }
-}

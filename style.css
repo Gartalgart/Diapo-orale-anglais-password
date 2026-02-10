@@ -526,33 +526,51 @@ p.big-text {
 .console-box {
     background: #000;
     border: 2px solid var(--accent-green);
-    padding: 1rem;
+    padding: 2rem;
     font-family: var(--font-code);
     color: var(--accent-green);
-    width: 300px;
-    height: 150px;
-    overflow: hidden;
+    width: 90%;
+    /* Use percentage width to fill slide */
+    max-width: 1000px;
+    /* Cap width */
+    height: auto;
+    /* Let text determine height */
+    min-height: 300px;
+    /* Minimum height for look */
+    overflow: visible;
+    /* Prevent clipping */
     position: relative;
     border-radius: 5px;
+    font-size: 1.5rem;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 20px rgba(57, 255, 20, 0.2);
+}
+
+.console-content {
+    width: 100%;
 }
 
 .console-content::before {
-    content: "ATTACK_STARTED...\nTRYING: admin123\nTRYING: password\nTRYING: 123456\nACCESS GRANTED [FAILED]\nRETRYING...";
-    white-space: pre;
-    animation: scrollText 2s steps(5) infinite;
+    content: "ATTACK_STARTED...\00000aTRYING: admin123\00000aTRYING: password\00000aTRYING: 123456\00000aACCESS GRANTED [FAILED]\00000aRETRYING...";
+    white-space: pre-wrap;
+    /* Allow wrapping if needed, though usually pre */
+    display: block;
+    line-height: 1.5;
+    animation: textPulse 2s infinite;
 }
 
-@keyframes scrollText {
-    0% {
-        opacity: 0.5;
+@keyframes textPulse {
+
+    0%,
+    100% {
+        opacity: 0.8;
     }
 
     50% {
         opacity: 1;
-    }
-
-    100% {
-        opacity: 0.5;
+        text-shadow: 0 0 5px var(--accent-green);
     }
 }
 
@@ -643,6 +661,17 @@ p.big-text {
     margin-bottom: 0.5rem;
 }
 
+/* Specific adjustment for Slide 1 and 3 takeaway position */
+#slide-1 .takeaway,
+#slide-3 .takeaway {
+    bottom: 0.5rem;
+    /* Moved down even more */
+}
+
+#slide-7 .takeaway {
+    bottom: 1rem;
+}
+
 /* Red Alert for Slide 12 (Old Slide 7) */
 .slide#slide-12.active .visual-container.warning::before {
     content: '';
@@ -655,6 +684,31 @@ p.big-text {
     transform: translate(-50%, -50%);
     animation: alertPulse 2s infinite;
     z-index: -1;
+}
+
+/* Slide 7: Stats Grid */
+.stats-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    font-size: 2.2rem;
+    /* Increased slightly, not too much */
+    font-weight: bold;
+    color: var(--accent-blue);
+    text-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+}
+
+.stat-item {
+    padding: 1rem 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    border: 1px solid var(--glass-border);
+    transition: transform 0.3s;
+}
+
+.stat-item:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.1);
 }
 
 /* Responsive Design */
