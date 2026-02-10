@@ -661,8 +661,9 @@ p.big-text {
     margin-bottom: 0.5rem;
 }
 
-/* Specific adjustment for Slide 1 and 3 takeaway position */
+/* Specific adjustment for Slide 1, 2 and 3 takeaway position */
 #slide-1 .takeaway,
+#slide-2 .takeaway,
 #slide-3 .takeaway {
     bottom: 0.5rem;
     /* Moved down even more */
