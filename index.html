@@ -9,6 +9,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&family=Source+Code+Pro:wght@400;700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
@@ -23,7 +24,10 @@
                 <h1>STRONG PASSWORDS</h1>
                 <p class="subtitle">Not a Suggestion. A Necessity.</p>
                 <div class="visual-container">
-                    <div class="door-icon">🚪🔓</div>
+                    <div class="door-icon">
+                        <i class="fa-solid fa-door-open"></i>
+                        <i class="fa-solid fa-lock-open"></i>
+                    </div>
                 </div>
                 <p class="big-text">8 characters = Door Wide Open</p>
             </div>
@@ -50,8 +54,9 @@
                 <h2>The Perfect Recipe</h2>
                 <div class="visual-container">
                     <div class="recipe-grid">
-                        <div class="recipe-item"><span>Length</span>📏 12+</div>
-                        <div class="recipe-item"><span>Diversity</span>🔣 Aa1$</div>
+                        <div class="recipe-item"><span>Length</span><i class="fa-solid fa-ruler-horizontal"></i> 12+
+                        </div>
+                        <div class="recipe-item"><span>Diversity</span><i class="fa-solid fa-icons"></i> Aa1$</div>
                     </div>
                 </div>
                 <ul class="checklist">
@@ -92,7 +97,7 @@
             <div class="content">
                 <h2>First Line of Defense</h2>
                 <div class="visual-container">
-                    <div class="icon-placeholder">🛡️</div>
+                    <div class="icon-placeholder"><i class="fa-solid fa-shield-halved"></i></div>
                 </div>
                 <p>Computers get smarter. We must get wiser.</p>
             </div>
@@ -106,7 +111,10 @@
                 <p class="subtitle">Secure Your Digital Life</p>
                 <div class="visual-container" id="visual-title">
                     <!-- Image Placeholder: Cyber Shield/Lock -->
-                    <div class="icon-placeholder">🛡️🔒</div>
+                    <div class="icon-placeholder">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <i class="fa-solid fa-lock"></i>
+                    </div>
                 </div>
             </div>
             <div class="takeaway">Part 2: The Ultimate Tool</div>
@@ -153,12 +161,12 @@
                 <h2>Core Features</h2>
                 <div class="feature-list">
                     <div class="feature">
-                        <div class="icon">🎲</div>
+                        <div class="icon"><i class="fa-solid fa-dice"></i></div>
                         <h3>Generates</h3>
                         <p class="code-text">H7#m$9Lp!</p>
                     </div>
                     <div class="feature">
-                        <div class="icon">⚡</div>
+                        <div class="icon"><i class="fa-solid fa-bolt"></i></div>
                         <h3>Autofills</h3>
                         <p>Instant Login</p>
                     </div>
@@ -173,7 +181,7 @@
                 <h2>The Master Password</h2>
                 <div class="visual-container" id="visual-master">
                     <div class="key-visual">
-                        <span class="key-icon">🔑</span>
+                        <span class="key-icon"><i class="fa-solid fa-key"></i></span>
                     </div>
                 </div>
                 <ul class="checklist">
@@ -192,14 +200,14 @@
                 <h2>Cloud vs. Local</h2>
                 <div class="comparison">
                     <div class="option cloud">
-                        <div class="icon">☁️</div>
+                        <div class="icon"><i class="fa-solid fa-cloud"></i></div>
                         <h3>Cloud</h3>
                         <p>Synced everywhere (Phone + PC)</p>
                         <small>e.g. Dashlane, 1Password</small>
                     </div>
                     <div class="vs">VS</div>
                     <div class="option local">
-                        <div class="icon">💾</div>
+                        <div class="icon"><i class="fa-solid fa-floppy-disk"></i></div>
                         <h3>Local</h3>
                         <p>Stored on device (Offline)</p>
                         <small>e.g. KeePass</small>
@@ -214,7 +222,7 @@
             <div class="content">
                 <h2>The "Single Point of Failure"</h2>
                 <div class="visual-container warning">
-                    <div class="warning-icon">⚠️</div>
+                    <div class="warning-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
                 </div>
                 <p class="big-text">Convenient & Secure... but risky.</p>
                 <p>If the Master Key is stolen -> Game Over.</p>
@@ -227,19 +235,22 @@
             <div class="content">
                 <h2>Next: Two-Factor Authentication</h2>
                 <div class="next-step-interaction">
-                    <button class="next-btn" onclick="nextSlide()">See the Solution &rarr;</button>
+                    <button class="next-btn" onclick="nextSlide()">See the Solution <i
+                            class="fa-solid fa-arrow-right"></i></button>
                 </div>
-            </div>
-            <div class="takeaway">Romain will explain how 2FA solves this risk.</div>
+                <div class="takeaway">Romain will explain how 2FA solves this risk.</div>
         </section>
+
+
 
     </main>
 
     <div class="controls">
-        <button id="fullscreenBtn" onclick="toggleFullScreen()" title="Toggle Fullscreen">⛶</button>
-        <button id="prevBtn" onclick="prevSlide()">&#10094;</button>
+        <button id="fullscreenBtn" onclick="toggleFullScreen()" title="Toggle Fullscreen"><i
+                class="fa-solid fa-expand"></i></button>
+        <button id="prevBtn" onclick="prevSlide()"><i class="fa-solid fa-chevron-left"></i></button>
         <span id="slide-indicator">1 / 13</span>
-        <button id="nextBtn" onclick="nextSlide()">&#10095;</button>
+        <button id="nextBtn" onclick="nextSlide()"><i class="fa-solid fa-chevron-right"></i></button>
     </div>
 
     <script src="script.js"></script>

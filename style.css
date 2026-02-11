@@ -2,6 +2,8 @@
     --primary-bg: #0a0a1a;
     --accent-blue: #00f0ff;
     --accent-green: #39ff14;
+    --accent-red: #ff3366;
+    --accent-yellow: #ffd700;
     --text-color: #ffffff;
     --text-muted: #8888aa;
     --font-main: 'Outfit', sans-serif;
@@ -201,6 +203,7 @@ p.big-text {
 .feature .icon {
     font-size: 3rem;
     margin-bottom: 1rem;
+    color: var(--accent-blue);
 }
 
 /* Comparison (Slide 6) */
@@ -435,16 +438,18 @@ p.big-text {
 /* Slide 6 Icons Animations */
 .option.cloud .icon {
     animation: float 4s ease-in-out infinite;
+    color: var(--accent-blue);
 }
 
 .option.local .icon {
     /* Pulse effect for local disk */
     animation: pulse 3s infinite;
+    color: var(--accent-green);
 }
 
 .warning-icon {
     font-size: 8rem;
-    color: red;
+    color: var(--accent-red);
     animation: pulse 1s infinite;
 }
 
@@ -751,4 +756,44 @@ p.big-text {
         bottom: 5rem;
         padding: 0.8rem;
     }
+}
+
+/* --- Icon Colors --- */
+/* Danger / Insecure */
+.fa-door-open,
+.fa-lock-open,
+.fa-triangle-exclamation {
+    color: var(--accent-red);
+    filter: drop-shadow(0 0 10px var(--accent-red));
+}
+
+/* Security / Local / Safe */
+.fa-lock,
+.fa-floppy-disk,
+.fa-icons,
+.fa-bolt,
+.fa-check,
+.fa-mobile-screen-button,
+.fa-clipboard-check {
+    color: var(--accent-green);
+    filter: drop-shadow(0 0 10px var(--accent-green));
+}
+
+/* Cloud / Tech / Info */
+.fa-shield-halved,
+.fa-cloud,
+.fa-dice,
+.fa-ruler-horizontal,
+.fa-expand,
+.fa-chevron-left,
+.fa-chevron-right {
+    color: var(--accent-blue);
+    filter: drop-shadow(0 0 10px var(--accent-blue));
+}
+
+/* Key / Master / Password */
+.fa-key,
+.fa-asterisk {
+    color: var(--accent-yellow);
+    filter: drop-shadow(0 0 10px var(--accent-yellow));
 }
